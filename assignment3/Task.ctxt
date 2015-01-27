@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=x
+comment0.target=Task(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Task\r\n\ @param\ x\ chosen\ option\r\n
+comment1.params=
+comment1.target=int\ getJob()
+comment1.text=\r\n\ Retrieve\ option\r\n\ @return\ option's\ number\r\n
+numComments=2

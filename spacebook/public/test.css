@@ -1,0 +1,67 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	background-color: #decade;
+	font-family: Monospace;
+	font-size: 1.5em;
+	color: #406645;
+}
+
+a
+{
+	text-decoration:none;
+	color:#9999cc;
+	font-size:1.3em;
+	font-weight:bold;
+}
+
+nav
+{
+	width: 95%;
+}
+
+nav a
+{
+	font-weight: bold;
+}
+
+#section
+{
+	background-color: #9999cc;
+	width: 95%;
+}
+
+#segmenthome
+{
+	background-color: #E3F6FF;
+}
+
+#segment
+{
+	background-color: #E3F6FF;
+	width:95%;
+}
+
+#float
+{
+	float:right;
+}
+
+#publicprofile
+{
+	background-color: #E3F6FF;
+}
+
+#age
+{
+	width: 26%;
+	padding-right: 5em;
+}
+
+#status
+{
+	background-color: #96A5FA;
+	border:solid;
+	border-color: #6F84F7;
+}

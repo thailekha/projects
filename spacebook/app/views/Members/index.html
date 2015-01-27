@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+#{set title:'Members' /}
+#{set header:'Members page' /}
+
+<nav class="ui inverted blue menu">
+  <a class="ui item" href="/home">Home</a>
+  <a class="ui active item" href="/members">Members</a>
+  <a class="ui item" href="/profile">Profile</a>
+  <a class="ui item" href="/logout">Logout</a>
+</nav>
+
+<section id="segment" class="ui segment">
+  <h2 class="ui header">SpaceBook's Members</h2>
+  <div class="ui list">
+  	#{list items: users, as:'user'} 
+    <div class="item">
+    	<i class="right green triangle icon"></i> ${user.firstName + " " + user.lastName}
+    	<div class="ui purple label">
+			<i class="comment icon"></i>${user.statusText}
+    	</div>
+    	<a href="members/follow/${user.id}"><i class="user icon">follow</i></a>
+    </div>
+    #{/list}
+  </div>
+</section>

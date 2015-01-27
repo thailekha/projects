@@ -1,0 +1,57 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+#{set header:'The Spacebook Social Network' /}
+
+<nav class="ui inverted blue menu">
+  <a class="ui active item" href="/home">Home</a>
+  <a class="ui item" href="/members">Members</a>
+  <a class="ui item" href="/profile">Profile</a>
+  <a class="ui item" href="/logout">Logout</a>
+</nav>
+
+<section id="section" class="ui segment">
+  <h2 class="ui inverted header">SpaceBook: Home Page for ${user.firstName} ${user.lastName}</h2>
+  <div id="segmenthome" class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+        <h2>Friends (${user.friendships.size()})</h2>
+        <div class="ui list">
+        	#{list items:user.friendships, as:'friendship'}
+        		<div class="item">
+        			<i class="right green triangle icon"></i>
+        			<a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a>  
+        			<a href="/home/drop/${friendship.targetUser.id}">(Drop)</a>    
+        		</div>
+        	#{/list}
+        </div>
+      </div>
+      <div class="ui column">
+        <h2>Messages (${user.inBox.size()})</h2>
+        <table class="ui table">
+        	<thead>
+        		<tr>
+        			<th>${text1}</th>
+        			<th>${text2}</th>
+        		</tr>
+        	</thead>
+        	#{list items:user.inBox, as:'message'}
+        	<tbody>
+        		<tr>
+        			<td>
+        				<a href="/publicprofile/${message.from.id}">
+        					<img id="smallpic" src="/profile/getpicture/${message.from.id}" height="30" width="36"/>
+        					${message.from.firstName}
+        				</a>
+        			</td>
+        			<td>        				
+        				${message.messageText}
+        				<div class="ui teal label">${message.subject}</div>
+        			</td>
+        		</tr>
+        	</tbody>
+        	#{/list}
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

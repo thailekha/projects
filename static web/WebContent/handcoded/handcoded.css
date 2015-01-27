@@ -1,0 +1,145 @@
+body
+{   
+  font-family:sans-serif;
+  padding: 2%;
+  width: 95%;
+  background-size:100%;
+  background-repeat:no-repeat;
+  background-color: #E4dbbf;
+  border: .3em solid grey;
+}
+
+h2
+{
+	margin-left: .2em;
+	width:46%;
+	background-color:#dc5b21;
+	color:white;
+	font-size: 1.5em;
+	font-weight: bold;
+	border: .1em double;
+}
+
+#header
+{	
+	width: 100%;
+	border: .1em solid #FFBF29;
+	background-color:#dc5b21;
+	background-image:url(../image/nerd.png);
+	background-size: 40% ;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:white;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-indent: .8em;
+}
+
+#maincontent
+{	margin-left:10px;
+	width: 94%;
+	border: .2em solid;
+	margin: 10;
+	padding-left: 1%;
+	background-color: #70ab8f;
+	font-weight: bold;
+}
+
+#primary
+{
+	width: 55%;
+	float: left;
+	border: .2em solid;
+	margin: 10;
+	padding-left: 1%;
+	background-color: #7AAAE0;
+	font-weight:normal;
+}
+
+#secondary
+{
+	width: 36%;	
+	float: right;
+	border: .2em solid;
+	margin: 10;
+	background-color: #7AAAE0;
+	font-weight:normal;
+}
+
+#content
+{
+	width: 95%;
+	padding-left: 1%;
+	border: .2em solid;
+	margin: 10;
+	background-color: #7AAAE0;
+	font-weight:normal;
+}
+
+#italic
+{
+	font-style: italic;
+	display:inline;
+}
+
+#footer
+{
+	width: 100%;
+	clear: both;
+	margin: 10;
+	border-top: .2em solid;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#navigation
+{
+	font-size: 80%;
+	width: 100%;
+	clear: both;	
+}
+
+#tabs
+{
+	border-bottom: .5em solid #cc99cc;
+}
+
+#tabs li
+{
+	display: inline;
+	border-left: .3em solid #7AAAE0;
+	border-right: .3em solid #7AAAE0;
+}
+
+#tabs li a
+{
+	text-decoration: none;
+	padding: 0.25em 0.25em;
+	color: white;
+	background-color: #70ab8f;
+	font-weight: bold;
+}
+
+#home #tabs li#tabhome, #page1 #tabs li#tab1, #page2 #tabs li#tab2, #page3 #tabs li#tab3, #page4 #tabs li#tab4 , #page5 #tabs li#tab5, #page6 #tabs li#tab6, #page7 #tabs li#tab7, #page8 #tabs li#tab8
+{
+	padding: 0.25em 1em;
+	background-color: #846084;
+	color: white;
+	font-size: 1.05em;
+	font-weight: bold;
+	border-top: .2em solid;
+	border-left: .2em solid;
+	border-right: .2em solid;
+	border-color:  #cc99cc;
+}
+
+form
+{
+	padding-left:30;
+}
+
+#page9 #content
+{
+	font-size:1em;
+	padding-left:10;
+}

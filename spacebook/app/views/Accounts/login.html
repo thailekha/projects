@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Login to Spacebook' /}
+#{set header:'Login' /}
+
+<nav class="ui inverted blue menu">
+  <a class="ui item" href="/signup"> Signup </a>
+  <a class="ui active item" href="/login"> Login </a>
+</nav>
+
+<section id="segment" class="ui segment">
+	<p> Log in here ... </p>
+</section>
+
+<section id="segment" class="ui form segment">
+	<form action="/authenticate" method="POST">
+		<div class="field">
+			<label> Username: </label>
+			<input type="text" name="email">	
+		</div>
+		<div class="field">
+			<label> Password: </label>
+			<input type="password" name="password">
+		</div>
+		<button class="ui blue submit button">Login</button>
+	</form>
+	
+</section>

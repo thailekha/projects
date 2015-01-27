@@ -1,0 +1,43 @@
+#{extends 'main.html' /}
+#{set title:'Profile' /}
+#{set header:'Your profile' /}
+
+<nav class="ui inverted blue menu">
+  <a class="ui item" href="/home">Home</a>
+  <a class="ui item" href="/members">Members</a>
+  <a class="ui active item" href="/profile">Profile</a>
+  <a class="ui item" href="/logout">Logout</a>
+</nav>
+
+<section id="segment" class="ui segment">
+  <h2 class="ui header">
+  	${user.firstName+" "+user.lastName}'s Profile 
+  	<a href="/profile/editprofile" class="ui huge teal label">Edit profile</a>
+  </h2>
+  <p>Email:  ${user.email}
+  <br>Age: ${user.age}
+  <br>Nationality: ${user.nationality}
+  <div id="segment" class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+        <p>	
+          	<img src="/profile/getpicture/${user.id}"/>
+        </p>
+        <form action="/profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">
+          	<input type="file" name="picture" /> <input type="submit" name="submit" value="upload" />
+        </form>
+      </div>
+      <div id="status" class="ui column form segment">
+      	<h2 class="ui medium header">Status</h2>
+      	<div class="ui huge purple label">
+      		<p> ${user.statusText}
+      	</div>
+      	<br><br>
+        <form action="profile/changestatus" method="post">
+        	<textarea class="ui field" name="profileText" placeholder="Write your status"></textarea>
+          	<input class="ui blue button" type="submit" name="submit" value="Change" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

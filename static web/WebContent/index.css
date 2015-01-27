@@ -1,0 +1,29 @@
+body
+{   
+  	font-family:sans-serif;
+ 	padding: 2%;
+ 	width: 95%;
+	border: .3em solid;
+	background-color:grey;
+}
+
+h2
+{
+	margin-left:.5em;
+	border: .1em solid;
+	width:45%;
+	background-color:#7AAAE0;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+body p
+{
+	font-weight:bold;
+	font-size:1.5em;
+	width: 90%;
+	border: .2em solid;
+	padding:20;
+	margin: 10;
+	background-color: #7AAAE0;
+}

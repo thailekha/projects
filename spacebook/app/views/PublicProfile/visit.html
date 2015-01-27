@@ -1,0 +1,41 @@
+#{extends 'main.html' /}
+#{set title:'Spacebook' /}
+#{set header:'Friend profile' /}
+
+<nav class="ui inverted black menu">   
+  <a class="ui active item" href="/home">Back to Home</a> 
+</nav>
+
+<section id="segment" class="ui raised segment">
+  <div class="ui small header"> ${user.firstName + " " + user.lastName}'s Profile (${user.nationality})</div>
+  <section id="publicprofile" class="ui  two column grid segment">
+      <div class="column">
+        <div class="ui medium image">
+          	<img src="/profile/getpicture/${user.id}"/>
+        </div>  
+        <form action="/publicprofile/sendmessage/${user.id}" class="ui form" method="POST">
+        	<div class="field">
+        		<input type="text" name="subject" placeholder="Subject">
+        	</div>
+        	<div class="field">
+        		<textarea name="messageText" placeholder="Message"></textarea>
+        	</div>
+        	<button class="ui fluid blue labeled submit icon button">
+        		<i class="icon edit"></i> Send
+        	</button>
+        </form>
+      </div>
+      <div class="column">
+        <div class="ui small header">Messages</div>
+        <hr>
+        <div class="ui list">
+        	#{list items: user.inBox, as:'message'}
+        	<div class="item">
+        		${message.from.firstName} says ... ${message.messageText}
+        		<div class="ui teal label">${message.subject}</div>
+        	</div>
+        	#{/list}
+        </div>
+    </div>
+  </section>    
+</section>

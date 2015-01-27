@@ -1,0 +1,36 @@
+#{extends 'main.html' /}
+#{set title:'Spacebook' /}
+#{set header:'Your profile' /}
+
+<nav class="ui inverted blue menu">   
+  <a class="ui active item" href="/profile">Back</a> 
+</nav>
+
+<section id="segment" class="ui form segment">
+  <div class="ui purple header">Edit your profile</div>	
+  <form action="/profile/edit" method="POST">
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input placeholder="First Name" type="text" name="firstName">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input placeholder="Last Name" type="text" name="lastName">
+      </div>
+    </div> 
+    <div id="age" class="field">
+        <label>Age</label>
+        <input placeholder="Age" type="text" name="age">
+    </div>
+    <div class="field">
+    	<label>Password</label>
+      	<input type="password" name="password1">
+    </div>
+    <div class="field">
+      	<label>Confirm password</label>
+      	<input type="password" name="password2">
+    </div>
+    <button class="ui purple submit button">Change</button>
+  </form>
+</section> 
